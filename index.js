@@ -1,0 +1,35 @@
+require('dotenv/config');
+
+const telebot = require('telebot');
+const bot = new telebot(process.env.BOT_TOKEN);
+
+const channelId = process.env.CHANNEL_ID;
+
+const { getZapeado } = require('./requests');
+
+const msgOptions = {
+    parseMode: 'Markdown',
+};
+
+const sendToChannel = (msg) => {
+    bot.sendMessage(channelId, msg, msgOptions);
+}
+
+bot.on('/zapear', async (msg) => {
+    const receivedMsg = msg.text.replace('/zapear ', '');
+
+    const zapeado = await getZapeado(receivedMsg);
+
+    await msg.reply.text(zapeado, msgOptions);
+    msg.reply.text("Postado em: @historiasdozap");
+
+    sendToChannel(zapeado)
+});
+
+bot.on('/zapearescondido', async (msg) => {
+    const receivedMsg = msg.text.replace('/zapearescondido', '');
+
+    msg.reply.text(await getZapeado(receivedMsg), msgOptions);
+});
+
+bot.start();

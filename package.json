@@ -1,0 +1,28 @@
+{
+  "name": "zapeadordotelegram",
+  "version": "1.0.0",
+  "description": "Zapeador de mensagens para bot do telegram.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realrootboy/zapeadordotelegram.git"
+  },
+  "keywords": [
+    "zapeador"
+  ],
+  "author": "Renan M. Gomes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realrootboy/zapeadordotelegram/issues"
+  },
+  "homepage": "https://github.com/realrootboy/zapeadordotelegram#readme",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "dotenv": "^8.2.0",
+    "telebot": "^1.2.6"
+  }
+}
