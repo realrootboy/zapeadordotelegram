@@ -13,7 +13,8 @@
   },
   "keywords": [
     "zapeador",
-    "telegram bot"
+    "telegram bot",
+    "bot"
   ],
   "author": "Renan M. Gomes",
   "license": "MIT",
