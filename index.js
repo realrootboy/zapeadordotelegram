@@ -45,3 +45,12 @@ http.createServer((req, res) => {
 	res.end();
 }).listen(process.env.PORT || 3333);
 
+
+
+
+const axios = require('axios');
+const cron = require('node-cron');
+
+cron.schedule('0,15,30,45 * * * *', async () => {
+	axios.get('http://zapeador.herokuapp.com/');
+});
