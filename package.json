@@ -12,7 +12,8 @@
     "url": "git+https://github.com/realrootboy/zapeadordotelegram.git"
   },
   "keywords": [
-    "zapeador"
+    "zapeador",
+    "telegram bot"
   ],
   "author": "Renan M. Gomes",
   "license": "MIT",
