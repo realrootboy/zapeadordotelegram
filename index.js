@@ -33,3 +33,15 @@ bot.on('/zapearescondido', async (msg) => {
 });
 
 bot.start();
+
+
+
+
+
+const http = require('http');
+
+http.createServer((req, res) => {
+	res.write('Hello World!');
+	res.end();
+}).listen(process.env.PORT || 3333);
+
